@@ -1,0 +1,143 @@
+/* MENU PRINCIPAL */
+.nathaliemota-nav-primary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+}
+
+.nathaliemota-nav-primary img {
+    width: 250px;
+    height: auto;
+}
+
+.nathaliemota_nav {
+    display: flex;
+    gap: 45px; 
+}
+
+.nathaliemota_nav li {
+    list-style: none; 
+}
+
+.nathaliemota_nav a {
+    font-family: "Space-mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000 !important; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+}
+
+/* MENU HAMBURGER */
+.menu-toggle {
+    display: none;
+    cursor: pointer; 
+}
+
+.bar {
+    display: block;
+    width: 25px; /* Largeur des barres */
+    height: 3px; /* Hauteur des barres */
+    margin: 4px; /* Espacement entre les barres */
+    background-color: black; 
+}
+
+/* FOOTER */
+.nathaliemota_footer {
+    display: flex;
+    gap: 45px; 
+    justify-content: center;
+    padding-top: 10px;
+    border-top: 1px solid #000; 
+}
+
+.nathaliemota_footer li {
+    list-style: none; 
+}
+
+.nathaliemota_footer a {
+    font-family: "Space-mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000 !important; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+    .nathaliemota-nav-primary {
+        padding: 0 15px; 
+    }
+
+    .menu-toggle {
+        display: block; 
+        position: absolute; 
+        right: 20px; 
+    }
+
+    .nav-menu {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; 
+        right: 0; 
+        background-color: white; 
+        width: 100%; 
+        z-index: 100; 
+    }
+
+    .nav-menu.active {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        padding:0;
+        margin-top:40px;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg); 
+        margin-top: 8px; 
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0; 
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg); 
+        margin-top: -16px; 
+    }
+
+    .nathaliemota_nav {
+        background-color:#E00000;
+        height: 90%;
+    }
+
+    .nathaliemota_nav a {
+        font-size: 44px;
+        line-height: 65px;
+        color: #FFFFFF !important; 
+        text-align: center;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 425px) {
+    .nathaliemota_footer {
+        flex-direction: column;
+        text-align: center; 
+        gap: 25px;
+    }
+
+    .nathaliemota-nav-primary img {
+        width: 200px;
+        height: auto;
+    }
+    .nathaliemota_footer {
+        padding-left:0;
+    }
+}
