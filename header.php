@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathalie Mota</title>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php wp_head(); ?>
 </head>
-<body>
-    
-</body>
-</html>
+<body <?php body_class(); ?>>
+    <header>
+        <nav>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary', // Assurez-vous que cette valeur correspond à celle définie dans functions.php
+                'menu_class' => 'nav-menu', // Ajoutez une classe CSS si nécessaire
+            ));
+            ?>
+        </nav>
+    </header>
